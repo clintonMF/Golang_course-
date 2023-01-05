@@ -40,6 +40,7 @@ func main() {
 	var names_slice []names
 
 	readFile, err := os.Open(name_of_file)
+	defer readFile.Close()
 
 	if err != nil {
 		fmt.Println(err)
@@ -62,7 +63,6 @@ func main() {
 		names_slice = append(names_slice, each_name)
 
 	}
-	readFile.Close()
 
 	for i := 0; i < len(names_slice); i++ {
 		firstName := names_slice[i].first_name

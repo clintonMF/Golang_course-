@@ -31,7 +31,7 @@ func main() {
 		}
 		a = append(a, num_input)
 		sort.Slice(a, func(i, j int) bool {
-			return a[i] < a[j]
+			return a[i] > a[j]
 		})
 		fmt.Println(a)
 	}

@@ -8,7 +8,8 @@ slice. The program adds the integer to the slice, sorts the slice,
 and prints the contents of the slice in sorted order. The slice must
 grow in size to accommodate any number of integers which the user
 decides to enter. The program should only quit (exiting the loop)
-when the user enters the character ‘X’ instead of an integer. */
+when the user enters the character ‘X’ instead of an integer. 
+*/
 
 package main
 
@@ -31,7 +32,7 @@ func main() {
 		}
 		a = append(a, num_input)
 		sort.Slice(a, func(i, j int) bool {
-			return a[i] > a[j]
+			return a[i] < a[j]
 		})
 		fmt.Println(a)
 	}

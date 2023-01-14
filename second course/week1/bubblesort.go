@@ -23,14 +23,14 @@ package main
 
 import "fmt"
 
-// func bubbleSort(arr *[]int) {
-// 	for i := 0; i < len(*arr)-1; i++ {
-// 		Swap(arr, i)
-// 	}
-// 	fmt.Println("")
-// 	fmt.Printf("sorted array => ")
-// 	fmt.Println(*arr)
-// }
+func bubbleSort(arr *[]int) {
+	for i := 0; i < len(*arr)-1; i++ {
+		Swap(arr, i)
+	}
+	fmt.Println("")
+	fmt.Printf("sorted array => ")
+	fmt.Println(*arr)
+}
 
 func Swap(arr *[]int, i int) {
 	ar := *arr
@@ -41,30 +41,22 @@ func Swap(arr *[]int, i int) {
 	}
 }
 
-// //This function ask user for input and appends it to the array
-// func addInt(arr *[]int) {
-// 	var digit int
-// 	fmt.Scan(&digit)
-// 	*arr = append(*arr, digit)
-// }
+//This function ask user for input and appends it to the array
+func addInt(arr *[]int) {
+	var digit int
+	fmt.Scan(&digit)
+	*arr = append(*arr, digit)
+}
 
 func main() {
-	var arr []int = []int{3, 2, 3, 54, 1, 5, 6, 7}
-	// fmt.Println("please enter digits you are to enter 10 digits")
-	// i := 0
-	// for i < 10 {
-	// 	fmt.Println("\nplease enter digit", i+1)
-	// 	addInt(&arr)
-	// 	i++
-	// }
+	var arr []int
+	fmt.Println("please enter digits you are to enter 10 digits")
+	i := 0
+	for i < 10 {
+		fmt.Println("\nplease enter digit", i+1)
+		addInt(&arr)
+		i++
+	}
 
-	// bubbleSort(&arr)
-
-	Swap(&arr, 0)
-	Swap(&arr, 1)
-	Swap(&arr, 2)
-	Swap(&arr, 3)
-	Swap(&arr, 4)
-	Swap(&arr, 5)
-	fmt.Println(arr)
+	bubbleSort(&arr)
 }
